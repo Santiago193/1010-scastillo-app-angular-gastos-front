@@ -1,0 +1,48 @@
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+/* TABLA GENERAL */
+.tabla {
+  width: 90%;
+  margin: 0 auto;
+  border-collapse: collapse;
+  background-color: #ffffff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* ENCABEZADO */
+.tabla thead {
+  background-color: #fd450d; /* azul Bootstrap */
+  color: white;
+}
+
+.tabla th,
+.tabla td {
+  padding: 12px 15px;
+  text-align: center;
+}
+
+/* FILAS */
+.tabla tbody tr {
+  border-bottom: 1px solid #dddddd;
+}
+
+.tabla tbody tr:nth-child(even) {
+  background-color: #f8f9fa;
+}
+
+/* HOVER */
+.tabla tbody tr:hover {
+  background-color: #e9ecef;
+  cursor: pointer;
+}
+
+/* ÚLTIMA FILA */
+.tabla tbody tr:last-child {
+  border-bottom: none;
+}

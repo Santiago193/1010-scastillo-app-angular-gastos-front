@@ -1,0 +1,22 @@
+.card {
+  width: 80%;
+  margin: 20px auto;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+
+.card-body {
+  padding: 20px;
+}
+
+.btn {
+  padding: 10px 20px;
+}
+img {
+  width: 300px;        /* tamaño fijo */
+  height: auto;        /* mantiene proporción */
+  max-width: 100%;     /* evita que se salga del contenedor */
+  border-radius: 8px;  /* opcional, se ve más bonito */
+}

@@ -1,0 +1,73 @@
+<div class="container mt-4">
+  <h2 class="text-center">💰 Impuesto a la Renta</h2>
+
+  <!-- ALERTA -->
+  <div *ngIf="mensajeError" class="alert alert-danger text-center">
+    {{ mensajeError }}
+  </div>
+
+  <label>Cédula</label>
+  <input
+    type="text"
+    class="form-control mb-2"
+    [(ngModel)]="cedula"
+    placeholder="Ingrese su cédula"
+  >
+
+  <label>Sueldo anual</label>
+  <input
+    type="number"
+    class="form-control mb-3"
+    [(ngModel)]="sueldoAnual"
+    placeholder="Ingrese su sueldo anual"
+  >
+
+  <h4 class="mt-3">Gastos Personales</h4>
+
+  <div class="gasto mb-2">
+    <label>Alimentación</label>
+    <span class="limite">Límite: $3,809.65</span>
+    <input type="number" class="form-control" [(ngModel)]="gastos.alimentacion">
+  </div>
+
+  <div class="gasto mb-2">
+    <label>Vivienda</label>
+    <span class="limite">Límite: $3,809.65</span>
+    <input type="number" class="form-control" [(ngModel)]="gastos.vivienda">
+  </div>
+
+  <div class="gasto mb-2">
+    <label>Educación, arte y cultura</label>
+    <span class="limite">Límite: $3,809.65</span>
+    <input type="number" class="form-control" [(ngModel)]="gastos.educacion">
+  </div>
+
+  <div class="gasto mb-2">
+    <label>Vestimenta</label>
+    <span class="limite">Límite: $3,809.65</span>
+    <input type="number" class="form-control" [(ngModel)]="gastos.vestimenta">
+  </div>
+
+  <div class="gasto mb-3">
+    <label>Salud</label>
+    <span class="limite">Límite: $15,238.60</span>
+    <input type="number" class="form-control" [(ngModel)]="gastos.salud">
+  </div>
+
+  <button class="btn btn-success w-100" (click)="calcularImpuesto()">
+    Calcular
+  </button>
+
+  <!-- RESULTADOS -->
+  <div class="resultado mt-4" *ngIf="impuestoRenta > 0">
+    <p><strong>Total deducible:</strong> ${{ totalDeduccion }}</p>
+    <p><strong>Base imponible:</strong> ${{ baseImponible }}</p>
+    <p>
+      <strong>Impuesto a pagar:</strong>
+      ${{ impuestoRenta | number:'1.2-2' }}
+    </p>
+  </div>
+</div>
+
+<h4 class="mt-4">📄 JSON generado</h4>
+<pre>{{ jsonResultado }}</pre>

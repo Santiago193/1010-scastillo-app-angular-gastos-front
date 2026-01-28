@@ -1,0 +1,40 @@
+.container {
+  max-width: 600px;
+  margin: auto;
+  font-family: Arial, sans-serif;
+}
+
+.gasto {
+  margin-bottom: 12px;
+}
+
+.limite {
+  float: right;
+  font-size: 13px;
+  color: #555;
+}
+
+input {
+  width: 100%;
+  padding: 6px;
+  margin-top: 4px;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 15px;
+}
+
+.resultado {
+  margin-top: 20px;
+  background: #f5f5f5;
+  padding: 12px;
+  border-radius: 6px;
+}
+
+pre {
+  background: #f0f0f0;
+  padding: 10px;
+  overflow-x: auto;
+}

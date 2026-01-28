@@ -1,0 +1,20 @@
+<h2>Reporte de Gastos</h2>
+
+<table class="tabla">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Tipo de Gasto</th>
+      <th>RUC</th>
+      <th>Valor</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let g of gastos">
+      <td>{{ g._id }}</td>
+      <td>{{ g.tipoGasto }}</td>
+      <td>{{ g.ruc }}</td>
+      <td>{{ g.valor }}</td>
+    </tr>
+  </tbody>
+</table>

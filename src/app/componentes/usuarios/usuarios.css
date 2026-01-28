@@ -1,0 +1,14 @@
+.tabla {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.tabla th,
+.tabla td {
+  border: 1px solid #ccc;
+  padding: 8px;
+}
+
+.tabla th {
+  background-color: #f0f0f0;
+}

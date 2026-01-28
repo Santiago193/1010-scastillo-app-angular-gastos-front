@@ -1,0 +1,20 @@
+<h2>Reporte de Usuarios</h2>
+
+<table class="tabla">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Nombre</th>
+      <th>Usuario</th>
+      <th>Correo</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let u of users">
+      <td>{{ u.id }}</td>
+      <td>{{ u.name }}</td>
+      <td>{{ u.username }}</td>
+      <td>{{ u.email }}</td>
+    </tr>
+  </tbody>
+</table>

@@ -1,0 +1,40 @@
+<ul class="list-unstyled">
+  <li *ngFor="let gasto of gastos; let i = index" class="mb-4">
+
+    <div class="card">
+      <img [src]="gasto.imagen" class="card-img-top" alt="imagen gasto">
+
+      <div class="card-body">
+        <h5 class="card-title">{{ gasto.nombre }}</h5>
+
+        <p class="card-text">
+          Descripción gasto deducible!!
+          <b>{{ gasto.nombre }}</b>
+        </p>
+
+        <!-- BOTÓN INFORMACIÓN -->
+        <button
+          type="button"
+          class="btn btn-primary mr-2"
+          (click)="mostrarInformacion(gasto)">
+          Información
+        </button>
+
+        <!-- BOTÓN BORRAR -->
+        <button
+          type="button"
+          class="btn btn-danger"
+          (click)="borrarGasto(i)">
+          Borrar
+        </button>
+
+        <!-- INFO ADICIONAL -->
+        <div *ngIf="gasto.mostrarInfo" class="alert alert-info mt-3">
+          {{ gasto.descripcion }}
+        </div>
+
+      </div>
+    </div>
+
+  </li>
+</ul>
